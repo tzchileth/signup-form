@@ -1,0 +1,65 @@
+/* styles.css */
+@font-face {
+    font-family: 'norsebold';
+    src: url("../fonts/norse-bold-webfont.woff2") format("woff2"),
+        url("../fonts/norse-bold-webfont.woff") format("woff");
+    font-weight: normal;
+    font-style: normal;
+}
+
+img {
+    -webkit-filter: blur(0);
+    -moz-filter: blur(0);
+    -o-filter: blur(0);
+    -ms-filter: blur(0);
+    filter: blur(0);
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+    background-color: black;
+}
+
+.container {
+    height: 500px;
+    width: 850px;
+    display: flex;
+    justify-content: space-between;
+    background-color: white;
+}
+
+.side-bar {
+    width: 300px;
+    display: flex;
+    background-image: url("../images/jon-tyson-SlntP-SLi0Q-unsplash.jpg");
+    background-size: cover;
+    font-family: "norsebold", monospace;
+}
+
+.side-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 300px;
+    height: 100px;
+    background-color: rgba(0, 0, 0, 0.767);
+    opacity: 0.8;
+    margin-top: 100px;
+
+}
+
+.odin-logo {
+    height: 70px;
+    width: 50px;
+}
+
+.logo-text {
+    color: white;
+    font-size: 50px;
+}
+
+.form {}
