@@ -1,10 +1,16 @@
 /* styles.css */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
 @font-face {
     font-family: 'norsebold';
     src: url("../fonts/norse-bold-webfont.woff2") format("woff2"),
         url("../fonts/norse-bold-webfont.woff") format("woff");
     font-weight: normal;
     font-style: normal;
+}
+
+div>label {
+    font-size: 10px;
 }
 
 img {
@@ -35,9 +41,12 @@ body {
 .side-bar {
     width: 300px;
     display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     background-image: url("../images/jon-tyson-SlntP-SLi0Q-unsplash.jpg");
     background-size: cover;
     font-family: "norsebold", monospace;
+    padding-bottom: 5px;
 }
 
 .side-container {
@@ -52,6 +61,16 @@ body {
 
 }
 
+.photo-credit {
+    font-family: Roboto sans-serif;
+    color: white;
+}
+
+.photo-credit>a {
+    color: white;
+    font-weight: normal;
+}
+
 .odin-logo {
     height: 70px;
     width: 50px;
@@ -62,4 +81,103 @@ body {
     font-size: 50px;
 }
 
-.form {}
+.form {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: rgba(235, 241, 241, 0.527);
+}
+
+.main-form {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.form-items {
+    display: flex;
+    justify-content: space-between;
+    gap: 50px;
+}
+
+.headline {
+    font-weight: bold;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.middle {
+    display: flex;
+    justify-content: space-between;
+    background-color: #ffffff;
+    padding-top: 8px;
+    padding-left: 30px;
+    padding-right: 95px;
+    padding-bottom: 15px;
+}
+
+.top {
+    margin-top: 70px;
+    margin-bottom: 20px;
+    font-weight: 500;
+    font-family: Roboto, sans-serif;
+    padding-right: 95px;
+    padding-left: 30px;
+    margin-bottom: 30px;
+    height: 100px;
+}
+
+.bottom {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    justify-content: center;
+    padding: 20px 30px;
+    border-top: 4px solid rgba(241, 241, 241, 0.911);
+}
+
+button {
+    color: white;
+    background-color: #596D48;
+    border-radius: 5px;
+    border-color: #596D48;
+    padding: 5px 8px;
+}
+
+a {
+    text-decoration: none;
+    color: #596D48;
+    font-weight: bold;
+}
+
+input {
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+input:placeholder-shown {
+    text-align: center;
+}
+
+input:focus {
+    background: rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+}
+
+input:invalid {
+    border: 2px solid #900;
+    background-color: #fdd;
+}
+
+input:focus:invalid {
+    outline: none;
+}
+
+input:valid:required {
+    border: 2px solid blue;
+}
+
+.error-message {
+    color: red;
+    font-size: 12px;
+}
