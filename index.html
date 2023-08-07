@@ -15,9 +15,98 @@
                 <div class="logo-image"><img class="odin-logo" src="./images/odin-lined.png" alt="ODIN Logo"></div>
                 <div class="logo-text">BushCat</div>
             </div>
+            <div class="photo-credit">
+                Photo by <a
+                    href="https://unsplash.com/@jontyson?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Jon
+                    Tyson</a> on <a
+                    href="https://unsplash.com/photos/SlntP-SLi0Q?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
+            </div>
         </div>
-        <div class="form">Main Form</div>
+
+        <div class="form">
+            <div class="top">This is not a real service! You know you need
+                something like this in your life to help you realize your
+                deepest dreams.
+                Sign up now to get started.
+                <p>You <em>know</em> you want to.</p>
+            </div>
+
+            <div class="middle">
+                <form class="main-form" action="">
+                    <div class="headline">Let's do this!</div>
+                    <div class="form-items">
+                        <div class="left">
+                            <div>
+                                <label for="firstName">FIRST NAME</label>
+                            </div>
+                            <div>
+                                <input type="text" id="firstName" name="firstName" placeholder="firstName" required>
+                            </div>
+
+                            <div>
+                                <label for="email">EMAIL</label>
+                            </div>
+                            <div>
+                                <input type="email" id="email" name="email" placeholder="email" required>
+                            </div>
+
+                            <div>
+                                <label for="password1">PASSWORD</label>
+                            </div>
+                            <div>
+                                <input class="error" type="password" id="password1" name="password1"
+                                    placeholder="password" required>
+                                <br><span class="error-message"></span>
+                            </div>
+                        </div>
+
+                        <div class="right">
+                            <div><label for="lastName">LAST NAME</label></div>
+                            <div><input type="text" id="lastName" name="lastName" placeholder="lastname" required></div>
+
+                            <div><label for="phone">PHONE NUMBER</label></div>
+                            <div><input type="tel" id="phone" name="phone" placeholder="phone number" required></div>
+
+                            <div><label for="password2">CONFIRM PASSWORD</label></div>
+                            <div>
+                                <input class="error" type="password" id="password2" name="password2"
+                                    placeholder="password" required>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+
+            <div class="bottom">
+                <div class="btn"><button type="submit">Create Account</button></div>
+                <div class="signup-message">Already have an account? <a href="#">Log In</a></div>
+            </div>
+        </div>
+    </div>
     </div>
 </body>
+<script>
+    const password = document.querySelector("#password1");
+    const password2 = document.querySelector("#password2");
+    const errorMessage = document.querySelector(".error-message")
+
+    password.addEventListener("input", (event) => {
+        if (password.value !== password2.value) {
+            errorMessage.textContent = "*Password do not match.";
+        } else if (password.value === password2.value) {
+            errorMessage.textContent = "";
+        }
+    });
+
+    password2.addEventListener("input", (event) => {
+        if (password.value !== password2.value) {
+            errorMessage.textContent = "*Password do not match.";
+        } else if (password.value === password2.value) {
+            errorMessage.textContent = "";
+        }
+    });
+
+
+</script>
 
 </html>
